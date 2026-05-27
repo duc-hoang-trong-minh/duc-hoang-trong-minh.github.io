@@ -3,6 +3,46 @@
 <head>
   <meta charset="utf-8">
   <title>Duc Hoang Trong Minh · INRS</title>
+  <meta data-seo="true" name="viewport" content="width=device-width, initial-scale=1">
+  <meta data-seo="true" name="description" content="Duc Hoang Trong Minh is an MSc researcher in telecommunications at INRS Montreal and NECPHY-Lab, working on AI-enabled security-aware communication systems, semantic communication, digital JSCC, and 5G O-RAN sensing.">
+  <meta data-seo="true" name="robots" content="index, follow">
+  <meta data-seo="true" name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta data-seo="true" name="author" content="Duc Hoang Trong Minh">
+  <meta data-seo="true" property="og:type" content="profile">
+  <meta data-seo="true" property="og:title" content="Duc Hoang Trong Minh · INRS">
+  <meta data-seo="true" property="og:description" content="MSc researcher in telecommunications at INRS Montreal and NECPHY-Lab, working on AI-enabled security-aware communication systems, semantic communication, digital JSCC, and 5G O-RAN sensing.">
+  <meta data-seo="true" property="og:url" content="https://inrsduc.github.io/">
+  <meta data-seo="true" name="twitter:card" content="summary">
+  <meta data-seo="true" name="twitter:title" content="Duc Hoang Trong Minh · INRS">
+  <meta data-seo="true" name="twitter:description" content="MSc researcher in telecommunications at INRS Montreal and NECPHY-Lab, working on AI-enabled security-aware communication systems, semantic communication, digital JSCC, and 5G O-RAN sensing.">
+  <link data-seo="true" rel="canonical" href="https://inrsduc.github.io/">
+  <script data-seo="true" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Duc Hoang Trong Minh",
+    "url": "https://inrsduc.github.io/",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "INRS"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Hanoi University of Science and Technology"
+    },
+    "jobTitle": "MSc researcher",
+    "knowsAbout": [
+      "telecommunications",
+      "semantic communication",
+      "digital JSCC",
+      "5G O-RAN sensing",
+      "AI-enabled communication systems"
+    ],
+    "sameAs": [
+      "https://github.com/INRSDUC"
+    ]
+  }
+  </script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #faf6ef; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -133,6 +173,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     // createElement so they execute, awaiting onload for src scripts to
     // preserve ordering (React before ReactDOM before Babel before text/babel).
     const doc = new DOMParser().parseFromString(template, 'text/html');
+    for (const el of document.head.querySelectorAll('[data-seo="true"]')) {
+      doc.head.appendChild(el.cloneNode(true));
+    }
     document.documentElement.replaceWith(doc.documentElement);
     const dead = Array.from(document.scripts);
     for (const old of dead) {

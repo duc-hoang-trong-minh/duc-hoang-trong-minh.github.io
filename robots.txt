@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inrsduc.github.io/sitemap.xml
