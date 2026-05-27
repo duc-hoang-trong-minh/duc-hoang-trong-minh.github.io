@@ -2,6 +2,6 @@
 
 Static profile site published with GitHub Pages.
 
-Live site: https://inrsduc.github.io/
+Live site: https://duc-hoang-trong-minh.github.io/
 
-Sitemap: https://inrsduc.github.io/sitemap.xml
+Sitemap: https://duc-hoang-trong-minh.github.io/sitemap.xml
