@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Duc Hoang Trong Minh · Phone Preview</title>
+  <meta name="description" content="Phone-sized preview of Duc Hoang Trong Minh's profile site." />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background: #e9e3d6;
+      color: #1a1714;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .desk {
+      min-height: 100vh;
+      padding: 48px 18px 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 22px;
+      background:
+        radial-gradient(900px 460px at 50% -8%, #f8f1e4 0%, #e9e3d6 62%, #dcd3c1 100%);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 9px 12px;
+      max-width: min(520px, 92vw);
+      font: 11px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #655e4d;
+      text-align: center;
+    }
+
+    .meta-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #b95a3c;
+      flex: 0 0 auto;
+    }
+
+    .phone {
+      width: min(402px, calc(100vw - 32px));
+      aspect-ratio: 402 / 874;
+      border-radius: 54px;
+      padding: 14px;
+      background: linear-gradient(145deg, #262a31, #0a0c10 58%, #363b43);
+      box-shadow:
+        0 28px 70px rgba(34, 25, 11, 0.28),
+        0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    }
+
+    .screen {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 42px;
+      background: #faf6ef;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .sensor {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      z-index: 2;
+      width: 104px;
+      height: 28px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: #07080a;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+      pointer-events: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #faf6ef;
+    }
+
+    @media (max-width: 520px) {
+      .desk {
+        padding-top: 28px;
+      }
+
+      .meta {
+        font-size: 10px;
+      }
+
+      .phone {
+        border-radius: 44px;
+        padding: 10px;
+      }
+
+      .screen {
+        border-radius: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="desk">
+    <div class="meta" aria-label="Preview details">
+      <span>Duc H.T.M. · INRS</span>
+      <span>/</span>
+      <span>Phone 402 x 874</span>
+      <span>/</span>
+      <span class="meta-dot" aria-hidden="true"></span>
+      <span>Preview</span>
+    </div>
+
+    <section class="phone" aria-label="Phone preview">
+      <div class="screen">
+        <div class="sensor" aria-hidden="true"></div>
+        <iframe src="./index.html" title="Duc Hoang Trong Minh profile site"></iframe>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
