@@ -395,6 +395,8 @@ if (typeof document !== "undefined" && !document.getElementById("site-real-style
   s.id = "site-real-styles";
   s.textContent = `
     @keyframes srvSlideUp { from { transform: translateY(12px); } to { transform: none; } }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .srv-topbar { box-sizing: border-box; width: 100%; }
     .srv-reveal { animation: srvSlideUp .55s cubic-bezier(.2,.7,.3,1); }
     @media (prefers-reduced-motion: reduce) { .srv-reveal { animation: none; } }
 
@@ -403,8 +405,8 @@ if (typeof document !== "undefined" && !document.getElementById("site-real-style
     .srv-mobile .srv-topbar-nav   { display: none !important; }
     .srv-mobile .srv-topbar-cv    { font-size: 11px !important; }
     .srv-mobile .srv-page         { padding: 0 20px 64px !important; gap: 64px !important; }
-    .srv-mobile .srv-hero-grid    { grid-template-columns: 1fr !important; gap: 32px !important; align-items: start !important; }
-    .srv-mobile .srv-hero-grid > div:last-child { max-width: 220px !important; }
+    .srv-mobile .srv-hero-grid    { grid-template-columns: 1fr !important; gap: 30px !important; align-items: start !important; }
+    .srv-mobile .srv-profile-portrait { width: min(220px, 70vw) !important; justify-self: start !important; }
     .srv-mobile .srv-hero-h1      { font-size: clamp(44px, 12vw, 64px) !important; }
     .srv-mobile .srv-interests    { grid-template-columns: repeat(2, 1fr) !important; }
     .srv-mobile .srv-interests > div:nth-child(odd)  { border-left: none !important; }
@@ -430,8 +432,8 @@ if (typeof document !== "undefined" && !document.getElementById("site-real-style
       .srv-topbar-nav   { display: none !important; }
       .srv-topbar-cv    { font-size: 11px !important; }
       .srv-page         { padding: 0 20px 64px !important; gap: 64px !important; }
-      .srv-hero-grid    { grid-template-columns: 1fr !important; gap: 32px !important; align-items: start !important; }
-      .srv-hero-grid > div:last-child { max-width: 220px !important; }
+      .srv-hero-grid    { grid-template-columns: 1fr !important; gap: 30px !important; align-items: start !important; }
+      .srv-profile-portrait { width: min(220px, 70vw) !important; justify-self: start !important; }
       .srv-hero-h1      { font-size: clamp(44px, 12vw, 64px) !important; }
       .srv-interests    { grid-template-columns: repeat(2, 1fr) !important; }
       .srv-interests > div:nth-child(odd)  { border-left: none !important; }
@@ -511,12 +513,12 @@ function Site() {
       </div>
 
       {/* ── Page body ─────────────────────────────────────── */}
-      <div id="top" className="srv-page" style={{ padding: "0 clamp(24px, 5vw, 72px) 80px", maxWidth: 1280, margin: "0 auto", display: "flex", flexDirection: "column", gap: 96 }}>
+      <div id="top" className="srv-page" style={{ padding: "0 clamp(24px, 5vw, 72px) 80px", maxWidth: 1280, margin: "0 auto", display: "flex", flexDirection: "column", gap: 78 }}>
 
         {/* HERO */}
         <header style={{ paddingTop: 64 }}>
           <Reveal>
-            <div className="srv-hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: 56, alignItems: "end" }}>
+            <div className="srv-hero-grid" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) 340px", gap: 56, alignItems: "end" }}>
               <div style={{ minWidth: 0 }}>
                 <div style={{ font: "11px var(--font-mono)", letterSpacing: "0.06em", color: "var(--accent)", textTransform: "uppercase", marginBottom: 18 }}>
                   {REAL.role}
@@ -531,7 +533,7 @@ function Site() {
                   <span style={{ color: "var(--accent)" }}>↳</span>
                   <span>Hoàng Trọng Minh Đức</span>
                 </div>
-                <p style={{ marginTop: 28, maxWidth: 600, fontSize: 18, lineHeight: 1.56 }}>
+                <p style={{ marginTop: 28, maxWidth: 740, fontSize: 18, lineHeight: 1.56 }}>
                   {REAL.shortBio}
                 </p>
                 <div style={{ marginTop: 26, display: "flex", flexWrap: "wrap", gap: "8px 22px", font: "12px var(--font-mono)", color: "var(--muted)", letterSpacing: "0.04em" }}>
@@ -542,7 +544,9 @@ function Site() {
                   <span>PhD · fall 2026</span>
                 </div>
               </div>
-              <PortraitSlot />
+              <div className="srv-profile-portrait" style={{ width: "min(300px, 100%)", justifySelf: "center", alignSelf: "end" }}>
+                <PortraitSlot />
+              </div>
             </div>
           </Reveal>
         </header>
@@ -568,9 +572,9 @@ function Site() {
                 </div>
               ))}
             </div>
-            <div className="srv-about-bottom" style={{ marginTop: 32, display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 48, alignItems: "start" }}>
+            <div className="srv-about-bottom" style={{ marginTop: 30, display: "grid", gridTemplateColumns: "minmax(0, 1fr) 340px", gap: 56, alignItems: "start" }}>
               <div>
-                <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.65 }}>{REAL.longerBio}</p>
+                <p style={{ margin: 0, maxWidth: 760, fontSize: 15.5, lineHeight: 1.65 }}>{REAL.longerBio}</p>
                 {REAL.outside && (
                   <p style={{
                     margin: "22px 0 0",
