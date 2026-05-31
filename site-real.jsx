@@ -19,7 +19,7 @@ const REAL = {
   shortBio:
     "Master's researcher at INRS Montréal, advised by Prof. Long Bao Le at NECPHY-Lab — beginning a PhD in fall 2026. Working on AI-enabled, security-aware communication systems: semantic communication, digital JSCC, and an O-RAN platform that turns standard 5G uplink signals into a device-free RF sensing layer.",
   longerBio:
-    "At INRS I work with Prof. Long Bao Le at NECPHY-Lab on AI-native cellular systems. The current focus is semantic communication — its design, its adversarial robustness, and its translation into deployable infrastructure: a conference paper at IEEE ICC '25 on backdoor attacks against LLM-based semantic encoders, a letter in IEEE Wireless Communications Letters extending the analysis to digital JSCC, and a follow-on letter on broader semcom design. Alongside this I lead the lab's 5G-O-RAN sensing platform, which reuses standard uplink reference signals as a sensing layer — the base station becomes the sensor — demonstrated live at IDEaS Marketplace 2026. Earlier training at HUST in physical-layer design anchors all of it. I'm beginning a PhD at INRS in fall 2026, continuing on programmable RAN and AI-native sensing.",
+    "At INRS I work with Prof. Long Bao Le at NECPHY-Lab on AI-native cellular systems. The current focus is semantic communication — its design, its adversarial robustness, and its translation into deployable infrastructure: a conference paper at IEEE ICC '25 on backdoor attacks against LLM-based semantic encoders, a letter in IEEE Wireless Communications Letters extending the analysis to digital JSCC, and a follow-on letter on broader semcom design. Alongside this I lead the lab's 5G-O-RAN sensing platform, which reuses standard uplink reference signals as a sensing layer — the base station becomes the sensor — demonstrated live for INRS at IDEaS Marketplace 2026 in Ottawa. Earlier training at HUST in physical-layer design anchors all of it. I'm beginning a PhD at INRS in fall 2026, continuing on programmable RAN and AI-native sensing.",
   outside:
     "badminton, chess, and a winter spent on a few different kinds of skates.",
   interests: ["Adversarial ML", "Joint source–channel coding", "RF sensing", "Reinforcement learning", "Physical-layer security"],
@@ -44,7 +44,7 @@ const REAL = {
     { year: "2021", text: "HUST Encouraging Academic Scholarship · Type A (Top 5%)" },
   ],
   news: [
-    { date: "May 2026", text: "Demoed the 5G-O-RAN device-free sensing platform at IDEaS Marketplace, Ottawa.", tag: "demo" },
+    { date: "May 2026", text: "Attended IDEaS Marketplace in Ottawa to present the INRS 5G-O-RAN device-free sensing project.", tag: "demo" },
     { date: "Apr 2026", text: "Starting PhD at INRS this fall — continuing on programmable RAN and AI-native sensing.", tag: "career" },
     { date: "2025", text: "ICC '25 paper on backdoor attacks against LLM-based semantic communication systems accepted.", tag: "paper" },
     { date: "2025", text: "Journal letter on backdoor attacks against digital JSCC semantic communication accepted at IEEE Wireless Communications Letters.", tag: "paper" },
@@ -57,7 +57,7 @@ const REAL = {
       title: "5G-O-RAN Device-Free RF Sensing",
       tag: "Featured · 2025 — present · NECPHY-Lab",
       blurb:
-        "An AI-RAN platform that reuses standard 5G uplink reference signals (SRS) as a sensing layer. The base station becomes the sensor — no wearables, no extra radar — for live presence detection, occupancy, and a continuously-learning RF digital twin. Demonstrated live at IDEaS Marketplace 2026.",
+        "An AI-RAN platform that reuses standard 5G uplink reference signals (SRS) as a sensing layer. The base station becomes the sensor — no wearables, no extra radar — for live presence detection, occupancy, and a continuously-learning RF digital twin. Demonstrated live for INRS at IDEaS Marketplace 2026 in Ottawa.",
       hover:
         "Commercial gNB over UDP → channel estimation → time-frequency waterfall → delay-domain features → online centroid classifier. RF-only, camera-only, or dual mode per mission.",
       stack: ["O-RAN", "SRS", "PyTorch", "RealSense", "MobileNet"],
